@@ -1,0 +1,120 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="guardar()">
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Código de la Dirección</mat-label>
+          <input matInput type="text" formControlName="codigo">
+        </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Dirección o Calles</mat-label>
+          <input matInput type="text" formControlName="direccionCalles">
+        </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Ciudad</mat-label>
+          <mat-select formControlName="ciudad">
+            <mat-option value="guayaquil">Guayaquil</mat-option>
+            <mat-option value="quito">Quito</mat-option>
+            <mat-option value="cuenca">Cuenca</mat-option>
+            <mat-option value="machala">Machala</mat-option>
+            <mat-option value="guaranda">Guaranda</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Parroquia</mat-label>
+          <input matInput type="text" formControlName="parroquia">
+        </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Referencia</mat-label>
+          <input matInput type="text" formControlName="referencia">
+        </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Código Postal</mat-label>
+          <input matInput type="number" formControlName="codigopostal">
+        </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Teléfono</mat-label>
+          <input matInput type="text" formControlName="telefono">
+        </mat-form-field>
+      </div>
+  
+      <div class="row mt-3">
+        <div class="col d-flex justify-content-between">
+          <button mat-raised-button color="primary" type="submit">Guardar</button>
+          <button mat-button color="warn" type="button" (click)="form.reset()">Limpiar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="container"  >
+
+ 
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-4">
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef>Código de la Dirección</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.codigo}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="direccionCalles">
+        <th mat-header-cell *matHeaderCellDef>Dirección o Calles</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.direccionCalles}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="ciudad">
+        <th mat-header-cell *matHeaderCellDef>Ciudad</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.ciudad}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="parroquia">
+        <th mat-header-cell *matHeaderCellDef>Parroquia</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.parroquia}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="referencia">
+        <th mat-header-cell *matHeaderCellDef>Referencia</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.referencia}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="codigopostal">
+        <th mat-header-cell *matHeaderCellDef>Código Postal</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.codigopostal}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="telefono">
+        <th mat-header-cell *matHeaderCellDef>Teléfono</th>
+        <td mat-cell *matCellDef="let Registro">{{Registro.telefono}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let Registro">
+          <button mat-icon-button color="warn" (click)="eliminar(Registro.codigo)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+ 
+</div>
+  

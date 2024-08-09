@@ -1,0 +1,48 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <ng-container *ngIf="isLoggedIn(); else loggedOut">
+        <span class="toolbar-title">TRINISTORE</span>
+        <span class="example-spacer"></span>
+
+        <button mat-button [matMenuTriggerFor]="userMenu">
+            <mat-icon>account_circle</mat-icon> Perfil
+        </button>
+        <mat-menu #userMenu="matMenu">
+            <button mat-menu-item routerLink="/perfil">
+                <mat-icon>account_circle</mat-icon> Ver Perfil
+            </button>
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>exit_to_app</mat-icon> Desconectarse
+            </button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="productos">
+            <mat-icon>shopping_cart</mat-icon> Registros
+        </button>
+        <mat-menu #productos="matMenu">
+            <button mat-menu-item routerLink="/productos">
+                <mat-icon>add_box</mat-icon> Productos
+            </button>
+            <button mat-menu-item routerLink="/cliente">
+                <mat-icon>add_box</mat-icon> Cliente
+            </button>
+        </mat-menu>
+
+        <button mat-button routerLink="/gestion">
+            <mat-icon>description</mat-icon> Orden
+        </button>
+        <button mat-button routerLink="/envios">
+            <mat-icon>local_shipping</mat-icon> Envios
+        </button>
+        <button mat-button routerLink="/soporte">
+            <mat-icon>support</mat-icon> Soporte
+        </button>
+    </ng-container>
+
+    <ng-template #loggedOut>
+        <span class="toolbar-title">TRINISTORE</span>
+        <span class="example-spacer"></span>
+        <button mat-button routerLink="/login">
+            <mat-icon>login</mat-icon> Login
+        </button>
+    </ng-template>
+</mat-toolbar>

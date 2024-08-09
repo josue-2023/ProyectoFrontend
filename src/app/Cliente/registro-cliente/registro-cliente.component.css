@@ -1,0 +1,78 @@
+.example-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    margin: 3% auto; /* Centramos el formulario */
+    padding: 10px; /* Añadimos un poco de espacio interno */
+    background-color: rgb(209, 218, 215);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Añadimos sombra para darle profundidad */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Espacio entre los campos */
+    width: 100%; /* Asegurarse de usar todo el ancho */
+    max-width: 800px; /* Máximo ancho del formulario */
+}
+
+mat-form-field {
+    width: 100%; /* Asegúrate de que los campos ocupen todo el ancho disponible */
+    margin: 2px 0; /* Espacio vertical entre los campos */
+}
+
+.btnAgregar {
+    display: flex;
+    margin-left: 90%;
+}
+
+.container {
+    margin: 30px auto; /* Centramos la tabla */
+    width: 100%; /* Aseguramos que la tabla use todo el ancho */
+    max-width: 1200px; /* Máxima anchura de la tabla */
+}
+
+table {
+     /* Espacio superior para la tabla */
+    width: 100%; /* Aseguraremos que la tabla use todo el ancho */
+    border-collapse: collapse; /* Colapsamos bordes de celda */
+}
+
+mat-header-cell, 
+mat-cell {
+    padding: 10px; /* Espacio interno en celdas */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+mat-header-cell {
+    background-color: rgb(200, 200, 230); /* Fondo para el encabezado */
+    font-weight: bold; /* Negrita para el encabezado */
+    border-bottom: 2px solid #ccc; /* Línea inferior para separación */
+}
+
+mat-paginator {
+    margin-top: 20px; /* Espacio superior para el paginador */
+    justify-content: flex-end; /* Alinear a la derecha el paginador */
+}
+
+.description-field {
+    grid-column: span 2; /* Tomar toda la fila */
+    width: 100%; /* Asegurarse que sea del ancho total */
+}
+
+.button-row {
+    margin: 15px 0;
+    background-color: rgb(81, 81, 172);
+    font-size: 20px;
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px; /* Espacio interior */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Indicamos que es clickeable */
+}
+
+.button-row:hover {
+    background-color: rgb(61, 61, 132); /* Cambiamos el color en hover */
+}

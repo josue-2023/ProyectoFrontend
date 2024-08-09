@@ -1,0 +1,17 @@
+.container {
+    max-width: 1200px; /* Ajusta según sea necesario */
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .full-width {
+    width: 50%;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    margin: 0 0.5rem;
+  }

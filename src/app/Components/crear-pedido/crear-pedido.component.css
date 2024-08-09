@@ -1,0 +1,34 @@
+.content{
+    padding: 10px;
+}
+
+h1{
+    padding: 10px;
+}
+
+.row{
+    display: flex;
+    gap:10px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.accion {
+    display: flex;
+    justify-content: center; /* Align buttons to the right */
+    gap: 10px; /* Space between buttons */
+    padding-bottom: 30px;
+}
+
+.btn1{
+    
+    display: flex;
+    justify-content: center; /* Align buttons to the right */
+    
+}
+
+
+
+

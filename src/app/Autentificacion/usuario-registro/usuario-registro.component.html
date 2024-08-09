@@ -1,0 +1,130 @@
+<div class="register-container">
+    <img src="assets/unete.jpeg" alt="unete Image" class="register-unete-image">
+    <mat-card class="register-card">
+      <h2>Registro</h2>
+      <form (ngSubmit)="onRegister()" #registerForm="ngForm" class="register-form">
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Correo</mat-label>
+            <input matInput type="email" [(ngModel)]="email" name="email" required email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.invalid && emailInput.touched">
+              Por favor, introduce un correo válido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput
+                   type="password"
+                   [(ngModel)]="password"
+                   name="password"
+                   required
+                   minlength="6"
+                   #passwordInput="ngModel"
+                   [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="passwordInput.errors?.['required'] && passwordInput.touched">
+              La contraseña es obligatoria.
+            </mat-error>
+            <mat-error *ngIf="passwordInput.errors?.['minlength'] && passwordInput.touched">
+              La contraseña debe tener al menos 6 caracteres.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <div class="name-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Nombre</mat-label>
+              <input matInput type="text" [(ngModel)]="name" name="name" required #nameInput="ngModel">
+              <mat-error *ngIf="nameInput.invalid && nameInput.touched">
+                El nombre es obligatorio.
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Apellido</mat-label>
+              <input matInput type="text" [(ngModel)]="surname" name="surname" required #surnameInput="ngModel">
+              <mat-error *ngIf="surnameInput.invalid && surnameInput.touched">
+                El apellido es obligatorio.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Número de cédula</mat-label>
+            <input matInput type="text" [(ngModel)]="cedula" name="cedula" required pattern="[0-9]{7,10}" #cedulaInput="ngModel">
+            <mat-error *ngIf="cedulaInput.invalid && cedulaInput.touched">
+              El número de cédula debe tener entre 7 y 10 dígitos.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <div class=" name-group">
+              <mat-form-field appearance="fill">
+                <mat-label>Fecha de Nacimiento</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="dob" name="dob" required #dobInput="ngModel">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="dobInput.invalid && dobInput.touched">
+                  La fecha de nacimiento es obligatoria.
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Género</mat-label>
+                <mat-select [(ngModel)]="gender" name="gender" required #genderInput="ngModel">
+                  <mat-option value="male">Masculino</mat-option>
+                  <mat-option value="female">Femenino</mat-option>
+                  <mat-option value="other">Otro</mat-option>
+                </mat-select>
+                <mat-error *ngIf="genderInput.invalid && genderInput.touched">
+                  El género es obligatorio.
+                </mat-error>
+              </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="city-country-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Ciudad</mat-label>
+              <input matInput type="text" [(ngModel)]="city" name="city" required #cityInput="ngModel">
+              <mat-error *ngIf="cityInput.invalid && cityInput.touched">
+                La ciudad es obligatoria.
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>País</mat-label>
+              <input matInput type="text" [(ngModel)]="country" name="country" required #countryInput="ngModel">
+              <mat-error *ngIf="countryInput.invalid && countryInput.touched">
+                El país es obligatorio.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Dirección</mat-label>
+            <input matInput type="text" [(ngModel)]="address" name="address" required #addressInput="ngModel">
+            <mat-error *ngIf="addressInput.invalid && addressInput.touched">
+              La dirección es obligatoria.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Teléfono</mat-label>
+            <input matInput type="tel" [(ngModel)]="phone" name="phone" required pattern="[0-9]{10}" #phoneInput="ngModel">
+            <mat-error *ngIf="phoneInput.invalid && phoneInput.touched">
+              El teléfono debe tener 10 dígitos.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Registrarse</button>
+      </form>
+    </mat-card>
+  </div>
+  <mat-card class="card"></mat-card>
+  

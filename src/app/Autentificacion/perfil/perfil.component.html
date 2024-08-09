@@ -1,0 +1,51 @@
+<div class="perfil-container">
+    <div class="welcome-container">
+       <!-- <h2>Bienvenido {{ currentUser.name }} {{ currentUser.surname }}</h2>-->
+    </div>
+
+    <div class="informacion-title">
+        <mat-icon></mat-icon>
+        INFORMACIÓN
+    </div>
+    <div class="profile-container">
+        <h2>Mi Perfil</h2>
+        <div class="user-details">
+            <div class="user-avatar">
+                <img src='assets/user.jpg' alt="user" class="user-image">
+            </div>
+            <div class="user-info">
+                <p><strong>Nombre:</strong>{{this.usuario.firstName}}  </p>
+                <p><strong>Correo:</strong> {{this.usuario.email}} </p>
+                <p><strong>rol:</strong> {{this.rol}} </p>
+
+            </div>
+        </div>
+        <div class="danger-zone-button">
+            <button mat-raised-button color="Gray" (click)="toggleUpdateMode()">
+                Actualizar Información
+            </button>
+            <!--<mat-icon>edit</mat-icon>-->
+        </div>
+    </div>
+
+    <mat-card  class="danger-zone-container">
+        <div class="danger-zone-title">
+            <mat-icon></mat-icon>
+            ZONA DE PELIGRO
+        </div>
+        <div class="danger-zone-button">
+            <button mat-raised-button color="Primary" (click)="logout()">
+                Cerrar Sesión
+            </button>
+            <!--<mat-icon>logout</mat-icon>-->
+        </div>
+
+        <div class="danger-zone-button">
+            <button mat-raised-button color="Gray" (click)="deleteAccount()">
+                Eliminar Cuenta
+            </button>
+            <mat-icon></mat-icon>
+        </div>
+    </mat-card>
+
+  

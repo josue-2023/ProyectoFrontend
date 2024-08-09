@@ -1,0 +1,30 @@
+<div class="login-container">
+  <!-- Imagen al lado del contenedor de login -->
+  <img src="assets/logo.jpeg" alt="logo" class="login-image">
+
+  <!-- Contenedor de login con mat-card -->
+  <mat-card class="login-card">
+    <h2>Login</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input formControlName="username" matInput type="text">
+     
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input formControlName="password" matInput type="password" >
+        </mat-form-field>
+ 
+      </div>
+     
+      <div class="form-group">
+        <button mat-raised-button [disabled]="form.invalid"   color="primary" type="submit" >Ingresar</button>
+   
+      </div>
+    </form>
+  </mat-card>
+</div>

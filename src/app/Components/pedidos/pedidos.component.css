@@ -1,0 +1,75 @@
+.card {
+    margin-top: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+    height: 80%;
+    margin: 5px;
+    
+}
+
+.btnAgregar {
+    margin-right: 5px;
+}
+
+.example-form-field {
+    margin-right: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+.delete {
+    cursor: pointer;
+    color: #E15639;
+}
+
+.edit {
+    cursor: pointer;
+    color: #1878B0;
+}
+
+.search {
+    cursor: pointer;
+
+}
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 75%;
+}
+
+.btn{
+    padding-top: 1%;
+    display: flex;
+    justify-content: right;
+    margin-top: 20px; 
+}
+
+.row{
+    display: flex;
+    gap:10px;
+}
+
+.enlace{
+    color: aliceblue;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: double;
+}
+
+/*
+
+.btn{
+    padding-top: 1%;
+    display: flex;
+    justify-content: right;
+    margin-top: 20px; 
+}
+    */
+

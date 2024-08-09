@@ -1,0 +1,74 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5; /* Fondo suave */
+    position: relative; /* Permite posicionar correctamente la imagen */
+  }
+  
+  .login-card {
+    padding: 31px;
+    width: calc(100% - 40px); /* Ajusta el ancho de la tarjeta para que haya un pequeño espacio entre la imagen y la tarjeta */
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+    background: white;
+    z-index: 1; /* Asegura que la tarjeta esté sobre la imagen */
+    margin-left: 300px; /* Ajusta el margen izquierdo para reducir la separación con la imagen */
+  }
+  
+  .login-image {
+    width: 21%; /* Ajusta el ancho de la imagen según tu diseño */
+    height: auto; /* Ajusta la altura automáticamente según el ancho */
+    object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: absolute; /* Posiciona la imagen absolutamente para que esté al lado de la tarjeta */
+    left: 500px; /* Ajusta la posición izquierda de la imagen */
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .extra-options {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .extra-options p {
+    margin: 10px 0;
+  }
+  
+  .extra-options button {
+    text-transform: none;
+    font-size: 14px;
+    color: #3f51b5;
+  }
+  
+  .extra-options a {
+    color: #3f51b5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Transiciones y efectos */
+  mat-card,
+  button,
+  .extra-options button {
+    transition: all 0.3s ease;
+  }
+  
+  button:hover,
+  .extra-options button:hover {
+    background: rgba(63, 81, 181, 0.1);
+  }
+  

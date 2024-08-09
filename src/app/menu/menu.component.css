@@ -1,0 +1,19 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+.custom-button {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 8px;
+    color: white;
+  }
+  
+  .custom-button mat-icon {
+    margin-right: 1px;
+  }
+  
+  .toolbar-title{
+    padding-left: 0%;
+}
+

@@ -1,0 +1,64 @@
+.register-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff; /* Color de fondo suave */
+    padding: 20px; /* Añade espacio de relleno alrededor del contenedor */
+    box-sizing: border-box;
+  }
+  
+  .register-unete-image {
+    margin-left: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 37%;
+    height: 30vh; /* Ajusta la altura de la imagen según tu diseño */
+    object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
+    z-index: 1; /* Coloca la imagen detrás de la tarjeta de registro */
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    margin-top: 6vh;
+    }
+  
+  .register-card {
+    width: 300%;
+    max-width: 700px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: white;
+    margin-top: 78vh;
+    border-radius: 8px; /* Bordes redondeados para la tarjeta */
+    z-index: 1; /* Asegura que la tarjeta esté sobre la imagen de fondo */
+  }
+  
+  .register-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: contents;
+  }
+  
+  .name-group,
+  .city-country-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    background: white;
+    margin-top: 50vh;
+    
+  }

@@ -1,0 +1,244 @@
+/* Contenedor principal */
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+   /* Cambia la tipografía aquí si lo deseas */
+  }
+  
+  /* Contenedor de bienvenida */
+  .welcome-container {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #d6d6d6; 
+    color: #000; /* Color de texto negro */
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía diferente */
+    font-size: 24px;
+    font-weight: bold;
+    width: 40%;
+  }
+  
+  /* Tarjetas y detalles del usuario */
+  .user-details-card, .update-profile-card {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-avatar {
+    margin-right: 20px;
+  }
+  
+  .user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    object-fit: cover;
+  }
+  
+  .user-info {
+    flex: 1;
+    font-family: 'Arial', sans-serif; /* Tipografía diferente */
+  }
+  
+  .user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .user-info strong {
+    color: #555;
+  }
+  
+  /* Contenedores de botones */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .button-containeruno, .button-containerdos {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  
+  button mat-icon {
+    margin-right: 5px;
+  }
+  
+  /* Zona de información */
+  .informacion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .informacion-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .informacion-title mat-icon {
+    margin-right: 10px;
+    color: #525252;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 20px; /* Mayor padding para un aspecto más espacioso */
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    width: 40%;
+  
+  }
+  
+  
+  .danger-zone-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fffefe;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    width: 40%;
+  
+  }
+  
+  .danger-zone-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 0;
+  }
+  
+  .danger-zone-title mat-icon {
+    margin-right: 10px;
+    color: #eec71a;
+  }
+  
+  .danger-zone-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Mayor padding para un aspecto más espacioso */
+    margin-bottom: 20px; /* Mayor margen para mayor separación entre elementos */
+    border: 1px solid #ddd; /* Borde sutil para definición */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco para resaltar */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+    padding: 10px;
+  }
+  .danger-zone-button button {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    text-align: left; /* Alineación del texto a la izquierda */
+    font-size: 1em; /* Tamaño de fuente consistente */
+    margin-right: 10px;
+  }
+  .danger-zone-button:hover {
+    background-color: #f9f9f9; /* Fondo más claro al pasar el ratón */
+  }
+  .danger-zone-button mat-icon {
+    margin-right: 10px;
+    color: #f00b0b;
+  }
+  
+  .mat-grid-list {
+    width: 100%;
+  }
+  
+  .mat-grid-tile {
+    padding: 10px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .user-details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .user-avatar {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .update-profile-card {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .update-profile-card h2 {
+    margin-bottom: 20px;
+  }
+  
+  .update-profile-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Añade espacio entre los elementos del formulario */
+  }
+  
+  .update-profile-card mat-form-field {
+    width: 100%; /* Hace que los campos del formulario ocupen el ancho completo */
+  }
+  
+  .button-container,
+  .button-containerdos {
+    
+    justify-content: center;
+    margin-top: 20px; /* Añade espacio por encima de los contenedores de botones */
+  }
+  
+  .button-container button,
+  .button-containerdos button {
+    justify-content: center;
+    margin: 0 10px; /* Añade espacio a los lados de los botones */
+  }
+  
